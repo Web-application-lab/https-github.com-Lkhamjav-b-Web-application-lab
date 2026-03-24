@@ -18,7 +18,7 @@
 
         <div class="top-nav__search">
             <div class="search-box">
-                <svg class="search-box__icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                <svg class="search-box__icon" width="15" height="15" viewBox="0 0 24 24" fill="none"
                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <circle cx="11" cy="11" r="8"/>
                     <line x1="21" y1="21" x2="16.65" y2="16.65"/>
@@ -28,8 +28,9 @@
         </div>
 
         <div class="top-nav__actions">
+            <!-- Wishlist -->
             <button class="icon-btn" aria-label="Wishlist">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
                      stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06
                              a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78
@@ -37,8 +38,9 @@
                 </svg>
             </button>
 
+            <!-- Cart -->
             <button class="icon-btn" aria-label="Cart">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
                      stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
                     <line x1="3" y1="6" x2="21" y2="6"/>
@@ -46,6 +48,7 @@
                 </svg>
             </button>
 
+            <!-- Login -->
             <button class="login-btn">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
                      stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
@@ -59,7 +62,7 @@
     </header>
 
     <!-- ════════════════════════════════
-         CATEGORY NAV
+         CATEGORY NAV  (with dropdowns)
     ════════════════════════════════ -->
     <nav class="cat-nav">
 
@@ -70,16 +73,157 @@
                 <line x1="3" y1="12" x2="21" y2="12"/>
                 <line x1="3" y1="18" x2="21" y2="18"/>
             </svg>
-            <span class="cat-nav__all-btn-text">Бүх бүтээгдэхүүн</span>
+            <span>Бүх бүтээгдэхүүн</span>
         </button>
 
         <ul class="cat-nav__list">
-            <li><a href="#">Арьс арчилгаа</a></li>
-            <li><a href="#">Нүүр будалт</a></li>
-            <li><a href="#">Нарны хамгаалалт</a></li>
-            <li><a href="#">Бие арчилгаа</a></li>
-            <li><a href="#">Үс арчилгаа</a></li>
-            <li><a href="#">Брэнд</a></li>
+
+            <!-- 1. Арьс арчилгаа -->
+            <li class="cat-nav__item">
+                <a href="#">Арьс арчилгаа</a>
+                <div class="dropdown">
+                    <a href="#" class="dropdown__item">
+                        Цэвэрлэгээ
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                    </a>
+                    <a href="#" class="dropdown__item">
+                        Арчилгаа
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                    </a>
+                    <a href="#" class="dropdown__item">
+                        Чийгшүүлэгч
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                    </a>
+                    <a href="#" class="dropdown__item">
+                        Нарны хамгаалалт
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                    </a>
+                    <a href="#" class="dropdown__item">
+                        Маск
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                    </a>
+                    <div class="dropdown__divider"></div>
+                    <a href="#" class="dropdown__see-all">Бүгдийг харах</a>
+                </div>
+            </li>
+
+            <!-- 2. Нүүр будалт -->
+            <li class="cat-nav__item">
+                <a href="#">Нүүр будалт</a>
+                <div class="dropdown">
+                    <a href="#" class="dropdown__item">
+                        Суурь & Консилер
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                    </a>
+                    <a href="#" class="dropdown__item">
+                        Нүдний будалт
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                    </a>
+                    <a href="#" class="dropdown__item">
+                        Уруулын будаг
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                    </a>
+                    <a href="#" class="dropdown__item">
+                        Хацрын будаг
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                    </a>
+                    <div class="dropdown__divider"></div>
+                    <a href="#" class="dropdown__see-all">Бүгдийг харах</a>
+                </div>
+            </li>
+
+            <!-- 3. Нарны хамгаалалт -->
+            <li class="cat-nav__item">
+                <a href="#">Нарны хамгаалалт</a>
+                <div class="dropdown">
+                    <a href="#" class="dropdown__item">
+                        Нүүрний SPF
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                    </a>
+                    <a href="#" class="dropdown__item">
+                        Биеийн SPF
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                    </a>
+                    <a href="#" class="dropdown__item">
+                        Нарны дараах арчилгаа
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                    </a>
+                    <div class="dropdown__divider"></div>
+                    <a href="#" class="dropdown__see-all">Бүгдийг харах</a>
+                </div>
+            </li>
+
+            <!-- 4. Бие арчилгаа -->
+            <li class="cat-nav__item">
+                <a href="#">Бие арчилгаа</a>
+                <div class="dropdown">
+                    <a href="#" class="dropdown__item">
+                        Угаалгын гель
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                    </a>
+                    <a href="#" class="dropdown__item">
+                        Биеийн лосьон
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                    </a>
+                    <a href="#" class="dropdown__item">
+                        Үнэртэн
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                    </a>
+                    <div class="dropdown__divider"></div>
+                    <a href="#" class="dropdown__see-all">Бүгдийг харах</a>
+                </div>
+            </li>
+
+            <!-- 5. Үс арчилгаа -->
+            <li class="cat-nav__item">
+                <a href="#">Үс арчилгаа</a>
+                <div class="dropdown">
+                    <a href="#" class="dropdown__item">
+                        Шампунь
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                    </a>
+                    <a href="#" class="dropdown__item">
+                        Кондиционер
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                    </a>
+                    <a href="#" class="dropdown__item">
+                        Маск & Тос
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                    </a>
+                    <div class="dropdown__divider"></div>
+                    <a href="#" class="dropdown__see-all">Бүгдийг харах</a>
+                </div>
+            </li>
+
+            <!-- 6. Брэнд -->
+            <li class="cat-nav__item">
+                <a href="#">Брэнд</a>
+                <div class="dropdown">
+                    <a href="#" class="dropdown__item">
+                        COSRX
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                    </a>
+                    <a href="#" class="dropdown__item">
+                        Laneige
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                    </a>
+                    <a href="#" class="dropdown__item">
+                        Innisfree
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                    </a>
+                    <a href="#" class="dropdown__item">
+                        Sulwhasoo
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                    </a>
+                    <a href="#" class="dropdown__item">
+                        Etude House
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                    </a>
+                    <div class="dropdown__divider"></div>
+                    <a href="#" class="dropdown__see-all">Бүгдийг харах</a>
+                </div>
+            </li>
+
         </ul>
 
         <button class="cat-nav__more-btn" aria-label="Дэлгэрэнгүй">
@@ -92,11 +236,21 @@
     </nav>
 
     <!-- ════════════════════════════════
-         HERO (demo)
+         HERO
     ════════════════════════════════ -->
     <section class="hero">
-        <h1 class="hero__title">Таны гоо сайхны дэлгүүр</h1>
-        <p class="hero__sub">Арьс, нүүр, бие — бүхнийг нэг дороос</p>
+        <div class="hero__bg"></div>
+        <div class="hero__overlay"></div>
+        <div class="hero__content">
+            <span class="hero__tag">3-р сарын 3 — 8</span>
+            <h1 class="hero__title">Born to <em>Bloom</em></h1>
+            <p class="hero__sub">
+                3-ны өдрөөс 8 хүртэл<br>
+                <strong>худалдан авалт бүрт</strong> тусгай тор бэлэглэнэ.
+            </p>
+            <p class="hero__brand">BEAUTYSHOP</p>
+            <a href="#" class="hero__cta">Дэлгүүр хэсэх →</a>
+        </div>
     </section>
 
 </body>
