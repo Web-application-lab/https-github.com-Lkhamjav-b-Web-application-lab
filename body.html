@@ -9,169 +9,12 @@
   <script src="https://kit.fontawesome.com/f23fece6f2.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="variables.css"/>
   <link rel="stylesheet" href="navbar.css"/>
+  <link rel="stylesheet" href="body.css"/>
 </head>
 
   <title>BeautyShop</title>
-  <style>
-    
-    :root {
-      --pink-light: #fce4ec;
-      --pink-mid: #e7d1d9;
-      --product-rating: #fbc02d;
-      --gradient-section: linear-gradient(90deg, #c7bfc2, #f8bbd0);
-      --radius-lg: 24px;
-      --radius-full: 9999px;
-      --shadow-card: 0 4px 24px rgba(233,30,140,0.08);
-      --shadow-hover: 0 8px 40px rgba(233,30,140,0.18);
-      --text-light: #999;
-      --sale-rate: #930000; 
-  }
 
-    body{
-      font-family: "Inter", sans-serif;
-      background-color: #ffffff;
-    }
-
-    .hero {
-      width: 100%;
-      max-width: 100%;
-      overflow: hidden;
-    }
-
-    .hero-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-
-    }
-
-    main.container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 20px;
-    }
-
-    main section h2{
-      font-size: 16px;
-      font-weight: bold;
-      margin-bottom: 10px;
-      color: #000000;
-      margin-bottom: 20px;
-    }
-
-    section {margin-bottom: 60px;}
-
-    .discount-product {margin-top: 40px;}
-
-    .high-rated {margin-bottom: 20px}
-
-    .strip{
-      display:flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      padding: 10px;
-      justify-content: center;
-
-    }
-
-    .strip-item{
-      width: 100px;
-      gap: 8px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
-      transition: transform 0.2s;
-    }
-
-    .strip-label {
-      display: block;
-      font-size: 12px;
-    }
-    
-    .strip-circle{
-      width: 5px;
-      height: 5px;
-      border-radius: 70%;
-      background-color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .strip-circle img {width: 50px;}
-
-    .strip-button{background: none; border: none; cursor: pointer; text-align: center;}
-    .strip-button:hover .strip-circle{transition: 0.3s; transform: translateY(-10%);}
-    .strip-button:hover .strip-circle{color: #fce4ec; font-weight: 600px;}
-    
-
-    .products {
-      display: flex;
-      overflow-x: auto;
-      padding: 10px;
-      gap:10px;
-    }
-    .product-body {position: relative; overflow: hidden;}
-
-    .products::-webkit-scrollbar{display: none;}
-    
-    .product-card {background: #fff;
-    border-radius: 20px;
-    box-shadow: var(--shadow-card);
-    padding: 16px;
-    position: relative; transition: all 0.3s; min-width: 220px; flex-shrink: 0; scroll-snap-align: start; padding-left: 12px; padding-right: 12px;}
-
-    .product-card:hover{transform: translateY(-6px); box-shadow: var(--shadow-hover);}
-    .product-image {height: 150px; display: flex;  align-items: center; justify-content: center;}
-    .product-image img{width: 200%; max-width: 150px; object-fit: contain;}
    
-    .product-actions {
-      display: flex; 
-      gap: 10px; 
-      margin-top: 10px;
-      justify-content: center;
-      opacity: 0;
-      pointer-events: none;
-      transform: translateY(20px);
-      transition: transform 0.2s; 
-    }
-    .product-card:hover .product-actions{opacity: 1; pointer-events: auto; transform: translateY(0);}
-      .product-actions .add-cart {display: flex; align-items: center; justify-content: center;width: 70px; height: 35px; background: linear-gradient(90deg, #fce4ec, #f8bbd0); border: none; border-radius: 12px; padding: 12px;}
-      .product-actions .wishlist{display: flex; align-items: center; justify-content: center;width: 70px; height: 35px; background: linear-gradient(90deg, #fce4ec, #f8bbd0); border: none; border-radius: 12px; padding: 12px;}
-
-
-    .product-menu {
-      position: absolute;
-      top: 16px;
-      right: 16px;
-      border: none;
-      background: #f5f5f5;
-      border-radius: 10px;
-      padding: 6px 10px;
-      }
-    
-    .product-rating i {color: var(--product-rating)}
-    .product-rating {font-size: 12px;}
-    .product-title {font-size: 14px; margin: 5px}
-    .product-brand {margin: 5px;font-size: 12px; color: var(--text-light); }
-    .old-price {font-size: 12px; color: var(--text-light); text-decoration: line-through;}
-    .sale-rate {font-size: 14px; color: var(--sale-rate); display:inline-block; border: 1px solid #b71212;border-radius:100px; padding:1px 5px;}
-
-    .product-badge {
-      position: absolute;
-      top: 16px;
-      left: 16px;
-      border: none;
-      background: #f5f5f5;
-      padding: 6px 14px;
-      border-radius: 14px;
-    }
-
-    
-
-  </style>
-
-</head>
 <body>
 
     <!-- ════════════════════════════════
@@ -260,10 +103,6 @@
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
                     </a>
                     <a href="#" class="dropdown__item">
-                        Нарны хамгаалалт
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-                    </a>
-                    <a href="#" class="dropdown__item">
                         Маск
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
                     </a>
@@ -277,19 +116,19 @@
                 <a href="#">Нүүр будалт</a>
                 <div class="dropdown">
                     <a href="#" class="dropdown__item">
-                        Суурь & Консилер
+                        Суурь
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
                     </a>
                     <a href="#" class="dropdown__item">
-                        Нүдний будалт
+                        Нүд
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
                     </a>
                     <a href="#" class="dropdown__item">
-                        Уруулын будаг
+                        Уруул
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
                     </a>
                     <a href="#" class="dropdown__item">
-                        Хацрын будаг
+                        Хацар өнгөлөгч
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
                     </a>
                     <div class="dropdown__divider"></div>
@@ -302,15 +141,11 @@
                 <a href="#">Нарны хамгаалалт</a>
                 <div class="dropdown">
                     <a href="#" class="dropdown__item">
-                        Нүүрний SPF
+                        Нүүр
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
                     </a>
                     <a href="#" class="dropdown__item">
-                        Биеийн SPF
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-                    </a>
-                    <a href="#" class="dropdown__item">
-                        Нарны дараах арчилгаа
+                        Бие
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
                     </a>
                     <div class="dropdown__divider"></div>
@@ -323,11 +158,11 @@
                 <a href="#">Бие арчилгаа</a>
                 <div class="dropdown">
                     <a href="#" class="dropdown__item">
-                        Угаалгын гель
+                        Биеийн саван
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
                     </a>
                     <a href="#" class="dropdown__item">
-                        Биеийн лосьон
+                        Биеийн тос
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
                     </a>
                     <a href="#" class="dropdown__item">
@@ -348,7 +183,7 @@
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
                     </a>
                     <a href="#" class="dropdown__item">
-                        Кондиционер
+                        Ангижруулагч
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
                     </a>
                     <a href="#" class="dropdown__item">
@@ -412,49 +247,51 @@
     <ul class="strip">
 
       <li class="strip-item">
+        
         <button class="strip-button">
-          <span class="strip-circle"></span>
-          <span class="strip-label">Чийгшүүлэх</span>
+          <span class="strip-circle"><img src="icons/Hydrating.svg" alt="Hydrating"></span>
+            <span class="strip-label">Чийгшүүлэх</span>    
         </button>
+        
       </li>
 
       <li class="strip-item">
         <button class="strip-button">
-          <span class="strip-circle"></span>
+          <span class="strip-circle"><img src="icons/Calming.svg" alt="Calming"></span>
              <span class="strip-label">Тайвшруулах</span>
       </li>
 
       <li class="strip-item">
         <button class="strip-button">
-          <span class="strip-circle"></span>
+          <span class="strip-circle"><img src="icons/Nutrition.svg" alt="Nutrition"></span>
             <span class="strip-label">Тэжээл өгөх</span>
         </button>
       </li>
 
       <li class="strip-item">
         <button class="strip-button">
-          <span class="strip-circle"></span>
+          <span class="strip-circle"><img src="icons/Whitening.svg" alt="Whitening"></span>
             <span class="strip-label">Цайруулах</span>
         </button>
       </li>
 
       <li class="strip-item">
         <button class="strip-button">
-          <span class="strip-circle"></span>
+          <span class="strip-circle"><img src="icons/Pores.svg" alt="Pores"></span>
             <span class="strip-label">Нүхжилт ашгаах</span>
         </button>
       </li>
 
       <li class="strip-item">
         <button class="strip-button">
-          <span class="strip-circle"></span>
+          <span class="strip-circle"><img src="icons/pH-balancing.svg" alt="pH-balancing"></span>
             <span class="strip-label">pH тэнцвэржүүлэх</span>
         </button>
       </li>
 
       <li class="strip-item">
         <button class="strip-button">
-          <span class="strip-circle"></span>
+          <span class="strip-circle"><img src="icons/Anti-aging.svg" alt="Anti-aging"></span>
             <span class="strip-label">Үрчлээний эсрэг</span>
         </button>
       </li>
@@ -469,13 +306,15 @@
       <button class="product-menu"><i class="fa-solid fa-ellipsis-vertical"></i></button>
 
       <a href="product-detail.html" class="product-detail">
-      <div class="product-image">
-        <img src="images/Jumiso-Cream.jpg" alt="Snail Mucin 88 + Peptide Cream">
-      </div>
 
-      <div class="product-body">
-        <h3 class="product-title">Snail Mucin 88 + Peptide Cream</h3>
-        <p class="product-brand">Jumiso</p>
+        <div class="product-image">
+          <img src="images/Jumiso-Cream.jpg" alt="Snail Mucin 88 + Peptide Cream">
+        </div>
+
+        <div class="product-body">
+          <h3 class="product-title">Snail Mucin 88 + Peptide Cream</h3>
+          <p class="product-brand">Jumiso</p>
+        </div>
       </a>
 
         <div class="product-rating">
@@ -490,11 +329,13 @@
           <button class="add-cart"><i class="fa-regular fa-cart-shopping"></i></button>
           <button class="wishlist"><i class="fa-regular fa-heart"></i></button>
         </div>
-      </div>
     </article>
 
     <article class="product-card">
       <button class="product-menu"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+
+      <a href="product-detail.html" class="product-detail">
+
       <div class="product-image">
         <img src="images/mung-bean.jpg" alt="Mung Bean Pore Clay Mask">
       </div>
@@ -502,6 +343,8 @@
       <div class="product-body">
         <h3 class="product-title">Mung Bean Pore Clay Mask</h3>
         <p class="product-brand">Beplain</p>
+      </div>
+      </a>
 
         <div class="product-rating">
           <i class="fa-solid fa-star"></i>
@@ -515,11 +358,13 @@
           <button class="add-cart"><i class="fa-regular fa-cart-shopping"></i></button>
           <button class="wishlist"><i class="fa-regular fa-heart"></i></button>
         </div>
-      </div>
     </article>
 
     <article class="product-card">
       <button class="product-menu"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+
+    <a href="product-detail.html" class="product-detail">
+
       <div class="product-image">
         <img src="images/37.jpg" alt="Mugwort Calming Cleanser">
       </div>
@@ -527,6 +372,8 @@
       <div class="product-body">
         <h3 class="product-title">Mugwort Calming Cleanser</h3>
         <p class="product-brand">Round Lab</p>
+      </div>
+    </a>
 
         <div class="product-rating">
           <i class="fa-solid fa-star"></i>
@@ -540,12 +387,14 @@
           <button class="add-cart"><i class="fa-regular fa-cart-shopping"></i></button>
           <button class="wishlist"><i class="fa-regular fa-heart"></i></button>
         </div>
-      </div>
     </article>
 
 
     <article class="product-card">
       <button class="product-menu"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+
+      <a href="product-detail.html" class="product-detail">
+
       <div class="product-image">
         <img src="images/axis-y_dark-spot-serum.jpg" alt="Dark Spot Correcting Glow Serum">
       </div>
@@ -553,6 +402,8 @@
       <div class="product-body">
         <h3 class="product-title">Dark Spot Correcting Glow Serum</h3>
         <p class="product-brand">AXIS-Y</p>
+      </div>
+      </a>
 
         <div class="product-rating">
           <i class="fa-solid fa-star"></i>
@@ -566,11 +417,13 @@
           <button class="add-cart"><i class="fa-regular fa-cart-shopping"></i></button>
           <button class="wishlist"><i class="fa-regular fa-heart"></i></button>
         </div>
-      </div>
     </article>
 
     <article class="product-card">
       <button class="product-menu"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+
+      <a href="product-detail.html" class="product-detail">
+
       <div class="product-image">
         <img src="images/345cream.jpg" alt="345 Relief Cream">
       </div>
@@ -578,6 +431,8 @@
       <div class="product-body">
         <h3 class="product-title">345 Relief Cream (New Version)</h3>
         <p class="product-brand">Dr.Althea</p>
+      </div>
+      </a>
 
         <div class="product-rating">
           <i class="fa-solid fa-star"></i>

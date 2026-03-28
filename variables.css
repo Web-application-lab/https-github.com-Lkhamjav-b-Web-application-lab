@@ -2,6 +2,7 @@
     /* ── Brand Pink Palette ── */
     --color-main-50:  #fff0f3;
     --color-main-100: #ffd6e0;
+    --color-main-150: #fce4ec;
     --color-main-200: #ffadc2;
     --color-main-300: #ff85a3;
     --color-main-400: #f75c85;
@@ -39,6 +40,15 @@
     --color-black-7: #666666;
     --color-black-8: #777777;
     --color-black-9: #888888;
+    --color-black-10: #999;
+
+
+    --product-rating: #fbc02d;
+    --gradient-section: linear-gradient(90deg, #c7bfc2, #f8bbd0);
+    --shadow-card: 0 4px 24px rgba(233,30,140,0.08);
+    --shadow-hover: 0 8px 40px rgba(233,30,140,0.18);
+    --sale-rate: #930000; 
+
 
     /* ── Sizing (px-based, reliable) ── */
     --nav-height:    64px;
