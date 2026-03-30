@@ -123,7 +123,7 @@
       padding: 6px 10px;
       }
     
-    .product-rating i {color: var(--product-rating)}
+    .product-rating i {color: var(--product-rating-star)}
     .product-rating {font-size: 12px;}
     .product-title {font-size: 14px; margin: 5px; text-decoration: none;}
     .product-brand {margin: 5px;font-size: 12px; color: var(--color-black-10); text-decoration: none;}
