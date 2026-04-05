@@ -59,6 +59,7 @@
     /* ── Spacing ── */
     --space-xs:  4px;
     --space-sm:  8px;
+    --space-m:   10px;
     --space-md:  16px;
     --space-lg:  24px;
     --space-xl:  32px;
@@ -67,6 +68,8 @@
     /* ── Typography ── */
     --font-display: 'Playfair Display', Georgia, serif;
     --font-body:    'DM Sans', system-ui, sans-serif;
+
+    --text-xxs: 10px;
     --text-xs:   12px;
     --text-sm:   13px;
     --text-base: 14px;

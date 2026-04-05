@@ -1,12 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import url('variables.css');    
 
-    .body {
+    body {
       background: var(--color-white-0);
     }
     .high-rated {
         margin: 2rem 2rem 2rem 2rem; 
         gap: 1rem;
+    }
+
+    .product-count {
+        font-size: var(--text-xs);
+        color: var(--color-black-8);
+    }
+    h2.high-rated-product {
+      font-size: var(--text-2xl);
     }
 
     .sort {
@@ -55,7 +63,7 @@
       img {
         width: 100%;
         height: 12rem;
-        object-fit: cover;
+        object-fit: contain;
       }
     }
 
@@ -63,7 +71,7 @@
     .product-card:hover .product-actions{opacity: 1; pointer-events: auto; transform: translateY(0);}
 
     .product-rating {
-      font-size: 12px;
+      font-size: var(--text-sm);
       .review-star {
         color: var(--product-rating-star);
       }
@@ -71,7 +79,7 @@
     
     .product-actions {
       display: flex; 
-      gap: 10px; 
+      gap: 0.75rem; 
       margin-top: 10px; 
       justify-content: center; 
       opacity: 0; 
@@ -81,8 +89,8 @@
         .add-cart, .wishlist {
           align-items: center; 
           justify-content: center;
-          width: 70px; 
-          height: 35px; 
+          width: 5rem; 
+          height: 2rem; 
           background: var(--color-main-100); 
           border: none; 
           border-radius: 12px; 
@@ -91,17 +99,45 @@
     }
 
     .product-title {
-      font-size: 0.75rem; 
+      font-size: var(--text-md); 
       margin: 5px; 
       text-decoration: none;
 
     }
     .product-brand {
       margin: 5px;
-      font-size: 0.7rem; 
+      font-size: var(--text-sm); 
       color: var(--color-black-10); 
       text-decoration: none;
     }
  
     .product-detail {text-decoration: none; color: var(--color-black-0);}
+    
+    /* ════════════════════════════════
+   RESPONSIVE — TABLET (≤1024px)
+    ════════════════════════════════ */
+    @media (max-width: 1024px) {
+        .high-rated-product {
+          font-size: var(--text-sm);
+        }
+        
+    }
+
+    /* ════════════════════════════════
+      RESPONSIVE — MOBILE (≤768px)
+    ════════════════════════════════ */
+    @media (max-width: 768px) {
+        h2.high-rated-product {
+          font-size: var(--text-lg);
+        }
+        .products {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
+          gap: 1rem;
+          margin: 2rem;
+        }
+        .product-image img {
+          object-fit: contain;
+        }
+    }
     
