@@ -2,8 +2,14 @@ fetch("products.json")
     .then(res => res.json())
     .then(data => {
         const products = data.products;
+
+        const highRatedProducts = products
+        .filter(product => product.rating >= 4.5)
+        .slice(0, 4);
+
         const container = document.getElementById("products");
-        container.innerHTML = products.map(product => `
+
+        container.innerHTML = highRatedProducts.map(product => `
             <a href="product-detail.html?id=${product.id}" class="product-link">
                 <div class="product-card">
                     <div class="product-image">

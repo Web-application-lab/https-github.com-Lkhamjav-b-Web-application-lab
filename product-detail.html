@@ -226,69 +226,7 @@
 
         </nav>
 
-        <section class="product-detail">
-        
-            <div class="detail-left">
-                <img src="images/Jumiso-Cream.jpg" alt="Jumiso-cream">
-            </div>
-
-            <div class="detail-right">
-                <div class="product-body">
-                    <p class="product-brand">Jumiso</p>
-                    <h3 class="product-title">Snail Mucin 88 + Peptide Cream</h3>
-                </div>
-
-                <div class="product-rating">
-                    <i class="fa-solid fa-star"></i>
-                    <span class="rating">0</span>
-                    <span class="reviews">(0)</span>
-                    <p class="product-price">60,000₮</p>
-                </div> 
-
-                <div class="product-count">
-                    <button class="plus"><i class="fa-solid fa-plus"></i></button>
-                    <span class="count">1</span>
-                    <button class="minus"><i class="fa-solid fa-minus"></i></button>
-                </div>
-
-                <div class="product-actions">
-                    <button class="add-cart">Сагслах</button>
-                    <button class="order">Захиалах</button>
-                    <button class="wishlist"><i class="fa-regular fa-heart"></i></button>
-                </div>
-
-                <div class="product-description">
-                    <div class="tabs">
-                        <button class="tab-btn active" onclick="openTab('how-to-use', this)">Хэрэглэх заавар</button>
-                        <button class="tab-btn" onclick="openTab('description', this)">Тайлбар</button>
-                        <button class="tab-btn" onclick="openTab('ingredients', this)">Найрлага</button>
-                    </div>
-
-                    <div id="how-to-use" class="tab-content" style="display: none;">
-                        <p>Jumiso Snail Mucin 88 + Peptide тосыг арьс арчилгааны сүүлийн шатанд, цэвэрлэгч, тонер, серум хэрэглэсний дараа түрхэнэ. Дунд зэргийн хэмжээтэйг нүүр болон хүзүүндээ жигд түрхээд, зөөлөн товшин шингээнэ. Өдөр бүр, өглөө оройд хэрэглэхэд аюулгүй бөгөөд бүх төрлийн арьсанд тохиромжтой.</p>
-                    </div>
-
-                    <div id="description" class="tab-content">
-                        <p><strong>Хүчирхэг арьс сэргээх найрлага:</strong>
-                            88% эмгэн хумсны шүүрэл агуулсан Солонгос нүүрний тос нь гэмтсэн арьсны хамгаалах давхаргыг эрчимтэй сэргээж, гүн чийгшүүлснээр арьсыг тань булбарай, эрүүл, сэргэсэн харагдуулна.</p>
-                        <p><strong>Дэвшилтэт 5 пептидийн цогцолбор:</strong>
-                            Copper Tripeptide-1, Palmitoyl Pentapeptide-4, Acetyl Hexapeptide-8, Palmitoyl Tripeptide-1, Palmitoyl Tetrapeptide-7 зэрэг найрлагууд нь коллагены үүсэлтийг дэмжиж, арьсны уян хатан чанарыг сэргээж өгнө.</p>
-                        <p><strong>Чийгшил ба уян хатан чанарыг нэмэгдүүлнэ:</strong>
-                            Sodium Hyaluronate болон Niacinamide-тай найрлага нь арьсыг гүн чийгшүүлж, уян хатан байдлыг сайжруулан, илүүдэл тослогийг зохицуулж, чийгийн тэнцвэрийг хадгална.</p>
-                        <p><strong>Чийгшил ба уян хатан чанарыг нэмэгдүүлнэ:</strong>
-                            Sodium Hyaluronate болон Niacinamide-тай найрлага нь арьсыг гүн чийгшүүлж, уян хатан байдлыг сайжруулан, илүүдэл тослогийг зохицуулж, чийгийн тэнцвэрийг хадгална.</p>
-                        <p><strong>Хөнгөн гель бүтэц:</strong>  
-                            Нүх бөглөхгүй (non-comedogenic) туршигдсан найрлага нь арьсанд хурдан шингэж, наалдамхай мэдрэмж үлдээхгүй. Мэдрэмтгий арьсанд аюулгүй, цочролын тестийг давсан. Арьс арчилгааны сүүлийн шатанд түрхэж, зөөлөн товшин шингээнэ.</p>
-                    </div>
-
-                    
-                    <div id="ingredients" class="tab-content" style="display: none;">
-                        <p>Snail Secretion Filtrate (88%), Niacinamide, Cetearyl Olivate, Sorbitan Olivate, Caprylic/​Capric Triglyceride, Betaine, Cetearyl Alcohol, Butylene Glycol, Water, Triethylhexanoin, Phenoxyethanol, Cyclohexasiloxane, Carbomer, Ethyl Hexanediol, Arginine, Allantoin, Sodium Polyacrylate, Sodium Hyaluronate, Dimethicone/​Vinyl Dimethicone Crosspolymer, Xanthan Gum, Panthenol, Adenosine, 1,2-Hexanediol, Copper Tripeptide-1, Palmitoyl Pentapeptide-4, Acetyl Hexapeptide-8, Palmitoyl Tripeptide-1, Palmitoyl Tetrapeptide-7</p>
-                    </div>
-                </div>
-            </div>
-            
-        </section>
+        <section class="product-detail" id="product-detail"></section>
 
         <section class="product-reviews">
             <h3 class="heading">Сэтгэгдэл</h3>
@@ -336,7 +274,7 @@
             </div>
 
         </section>
-
+        <script src="js/product-detail.js"></script>
     </body>
 
     <script>

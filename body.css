@@ -485,6 +485,10 @@
   font-size: var(--text-sm);
 }
 
-    
+.product-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}  
 
     

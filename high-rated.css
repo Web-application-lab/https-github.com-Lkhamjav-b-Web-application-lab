@@ -136,6 +136,12 @@
         grid-template-columns: 1fr 1fr;
       }
     }
+    .product-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}  
+
 
     
     
