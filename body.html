@@ -25,7 +25,7 @@
           <a href="#" class="top-nav__logo">BeautyShop</a>
 
           <div class="top-nav__search">
-              <dilv class="search-box">
+              <div class="search-box">
                   <svg class="search-box__icon" width="15" height="15" viewBox="0 0 24 24" fill="none"
                       stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                       <circle cx="11" cy="11" r="8"/>
@@ -241,7 +241,7 @@
     <main class="container">
 
       <section class="skin-concern-heading">
-        <h2 id="skin-concern-heading">Бүтээгдэхүүний төрлөөр</h2>
+        <h2 id="skin-concern-heading">Үйлчилгээний төрлөөр</h2>
 
         <ul class="strip">
 
@@ -308,330 +308,25 @@
           </a>
         </div>
 
-        <div id="products" class="products" >
+        <div class="products" data-page="high-rated"></div>
 
-          <article class="product-card">
-
-            <a href="product-detail.html" class="product-detail">
-
-              <div class="product-image">
-                <img src="images/snail_mucin_peptide_cream.jpg" alt="Snail Mucin 88 + Peptide Cream">
-              </div>
-
-              <div class="product-body">
-                <h3 class="product-title">Snail Mucin 88 + Peptide Cream</h3>
-                <p class="product-brand">Jumiso</p>
-              </div>
-            </a>
-
-              <div class="product-rating">
-                <span class="review-star"><i class="fa-solid fa-star"></i></span>
-                <span class="rating">4.9</span>
-                <span class="reviews">(0)</span>
-              </div>
-
-              <p class="product-price">60,000₮</p>
-
-              <div class="product-actions">
-                <button class="add-cart"><i class="fa-regular fa-cart-shopping"></i></button>
-                <button class="wishlist"><i class="fa-regular fa-heart"></i></button>
-              </div>
-          </article>
-
-          <article class="product-card">
-
-            <a href="product-detail.html" class="product-detail">
-
-              <div class="product-image">
-                <img src="images/mung-bean-pore-clay-mask.jpg" alt="Mung Bean Pore Clay Mask">
-              </div>
-
-              <div class="product-body">
-                <h3 class="product-title">Mung Bean Pore Clay Mask</h3>
-                <p class="product-brand">Beplain</p>
-              </div>
-            </a>
-
-              <div class="product-rating">
-                <span class="review-star"><i class="fa-solid fa-star"></i></span>
-                <span class="rating">5</span>
-                <span class="reviews">(20)</span>
-              </div>
-
-              <p class="product-price">55,900₮</p>
-
-              <div class="product-actions">
-                <button class="add-cart"><i class="fa-regular fa-cart-shopping"></i></button>
-                <button class="wishlist"><i class="fa-regular fa-heart"></i></button>
-              </div>
-          </article>
-
-          <article class="product-card">
-
-            <a href="product-detail.html" class="product-detail">
-
-              <div class="product-image">
-                <img src="images/mugwort_calming_cleanser.jpg" alt="Mugwort Calming Cleanser">
-              </div>
-
-              <div class="product-body">
-                <h3 class="product-title">Mugwort Calming Cleanser</h3>
-                <p class="product-brand">Round Lab</p>
-              </div>
-            </a>
-
-            <div class="product-rating">
-              <span class="review-star"><i class="fa-solid fa-star"></i></span>
-              <span class="rating">4.7</span>
-              <span class="reviews">(5)</span>
-            </div>
-
-            <p class="product-price">29,900₮</p>
-
-            <div class="product-actions">
-              <button class="add-cart"><i class="fa-regular fa-cart-shopping"></i></button>
-              <button class="wishlist"><i class="fa-regular fa-heart"></i></button>
-            </div>
-          </article>
-
-
-          <article class="product-card">
-
-            <a href="product-detail.html" class="product-detail">
-
-              <div class="product-image">
-                <img src="images/dark_spot_correcting_glow_serum.jpg" alt="Dark Spot Correcting Glow Serum">
-              </div>
-
-              <div class="product-body">
-                <h3 class="product-title">Dark Spot Correcting Glow Serum</h3>
-                <p class="product-brand">AXIS-Y</p>
-              </div>
-            </a>
-
-            <div class="product-rating">
-              <span class="review-star"><i class="fa-solid fa-star"></i></span>
-              <span class="rating">5.0</span>
-              <span class="reviews">(11)</span>
-            </div>
-
-            <p class="product-price">40,000₮</p>
-
-            <div class="product-actions">
-              <button class="add-cart"><i class="fa-regular fa-cart-shopping"></i></button>
-              <button class="wishlist"><i class="fa-regular fa-heart"></i></button>
-            </div>
-          </article>
-
-          <article class="product-card">
-
-            <a href="product-detail.html" class="product-detail">
-
-              <div class="product-image">
-                <img src="images/345_relief_cream.jpg" alt="345 Relief Cream">
-              </div>
-
-              <div class="product-body">
-                <h3 class="product-title">345 Relief Cream (New Version)</h3>
-                <p class="product-brand">Dr.Althea</p>
-              </div>
-            </a>
-
-            <div class="product-rating">
-              <span class="review-star"><i class="fa-solid fa-star"></i></span>
-              <span class="rating">4.6</span>
-              <span class="reviews">(15)</span>
-            </div>
-
-            <p class="product-price">69,900₮</p>
-
-            <div class="product-actions">
-              <button class="add-cart"><i class="fa-regular fa-cart-shopping"></i></button>
-              <button class="wishlist"><i class="fa-regular fa-heart"></i></button>
-            </div>
-          </article>
-        </div>
       </section>
+
+      <section class="discount-product">
+
+        <div class="heading-sale-product">
+          <h2 id="sale-product">Хямдралтай бүтээгдэхүүн</h2>
+          <a href="sales.html" class="view-all-sales">
+            <h2 class="view-all">Бүгдийг үзэх
+              <i class="fa-regular fa-arrow-right-long"></i>
+            </h2>
+          </a>
+        </div>
       
+      <div class="products" data-page="sales"></div>
 
-    <section class="discount-product">
+      </section>
 
-      <div class="heading-sale-product">
-        <h2 id="sale-product">Хямдралтай бүтээгдэхүүн</h2>
-        <a href="sales.html" class="view-all-sales">
-          <h2 class="view-all">Бүгдийг үзэх
-            <i class="fa-regular fa-arrow-right-long"></i>
-          </h2>
-        </a>
-      </div>
-      
-      <div cid="products" class="products">
-
-        <article class="product-card">
-          
-          <span class="sale-rate">-20%</span>
-          
-          <a href="product-detail.html" class="product-detail">
-            <div class="product-image">
-              <img src="images/eqqualberry-toner.jpg" alt="Swimming Pool Toner">
-            </div>
-
-            <div class="product-body">
-              <h3 class="product-title">Swimming Pool Toner</h3>
-              <p class="product-brand">Eqqualberry</p>
-            </div>
-          </a>
-
-          <div class="product-rating">
-            <span class="review-star"><i class="fa-solid fa-star"></i></span>
-            <span class="rating">4.8</span>
-            <span class="reviews">(16)</span>
-          </div>
-
-          <p class="product-price">
-            <span class="new-price">33,600₮</span>
-            <span class="old-price">42,000₮</span>
-          </p>
-
-            <div class="product-actions">
-              <button class="add-cart"><i class="fa-regular fa-cart-shopping"></i></button>
-              <button class="wishlist"><i class="fa-regular fa-heart"></i></button>
-            </div>
-        </article>
-
-        <article class="product-card">
-
-          <span class="sale-rate">-30%</span>
-
-          <a href="product-detail.html" class="product-detail">
-
-            <div class="product-image">
-              <img src="images/fwee-lip&cheek-blurry.jpg" alt="Mung Bean Pore Clay Mask">
-            </div>
-
-            <div class="product-body">
-              <h3 class="product-title">Lip&Cheek Blurry Pudding Pot - Feel'n</h3>
-              <p class="product-brand">Fwee</p>
-            </div>
-          </a>
-
-          <div class="product-rating">
-            <span class="review-star"><i class="fa-solid fa-star"></i></span>
-            <span class="rating">3.5</span>
-            <span class="reviews">(2)</span>
-          </div>
-
-          <p class="product-price">
-            <span class="new-price">28,000₮</span>
-            <span class="old-price">40,000₮</span>
-          </p>
-
-          <div class="product-actions">
-            <button class="add-cart"><i class="fa-regular fa-cart-shopping"></i></button>
-            <button class="wishlist"><i class="fa-regular fa-heart"></i></button>
-          </div>
-        </article>
-
-        <article class="product-card">
-
-          <span class="sale-rate">-10%</span>
-
-          <a href="product-detail.html" class="product-detail">
-            <div class="product-image">
-              <img src="images/medicube-serum-antiedad-pdrn-pink-peptide.jpg" alt="Mugwort Calming Cleanser">
-            </div>
-
-            <div class="product-body">
-              <h3 class="product-title">Anti-aging serum PDRN Pink Peptide</h3>
-              <p class="product-brand">Medicube</p>
-            </div>
-          </a>
-
-          <div class="product-rating">
-            <span class="review-star"><i class="fa-solid fa-star"></i></span>
-            <span class="rating">0</span>
-            <span class="reviews">(0)</span>
-          </div>
-
-          <p class="product-price">
-            <span class="new-price">50,310₮</span>
-            <span class="old-price">55,900₮</span>
-          </p>
-
-          <div class="product-actions">
-            <button class="add-cart"><i class="fa-regular fa-cart-shopping"></i></button>
-            <button class="wishlist"><i class="fa-regular fa-heart"></i></button>
-          </div>
-        </article>
-
-
-        <article class="product-card">
-
-          <span class="sale-rate">-20%</span>
-
-          <a href="product-detail.html" class="product-detail">
-
-              <div class="product-image">
-                <img src="images/mugwort_calming_cleanser.jpg" alt="Mugwort Calming Cleanser">
-              </div>
-
-              <div class="product-body">
-                <h3 class="product-title">Bakuchiol Plumping Serum</h3>
-                <p class="product-brand">Eqqualberry</p>
-              </div>
-            </a>
-
-          <div class="product-rating">
-            <span class="review-star"><i class="fa-solid fa-star"></i></span>
-            <span class="rating">0</span>
-            <span class="reviews">(0)</span>
-          </div>
-
-          <p class="product-price">
-            <span class="new-price">56,000₮</span>
-            <span class="old-price">70,000₮</span>
-          </p>
-
-          <div class="product-actions">
-            <button class="add-cart"><i class="fa-regular fa-cart-shopping"></i></button>
-            <button class="wishlist"><i class="fa-regular fa-heart"></i></button>
-          </div>
-        </article>
-
-        <article class="product-card">
-
-          <span class="sale-rate">-30%</span>
-
-          <a href="product-detail.html" class="product-detail">
-
-            <div class="product-image">
-              <img src="images/mugwort_calming_cleanser.jpg" alt="Mugwort Calming Cleanser">
-            </div>
-
-            <div class="product-body">
-              <h3 class="product-title">Mugwort Calming Cleanser</h3>
-              <p class="product-brand">Round Lab</p>
-            </div>
-          </a>
-
-          <div class="product-rating">
-            <span class="review-star"><i class="fa-solid fa-star"></i></span>
-            <span class="rating">4.7</span>
-            <span class="reviews">(5)</span>
-          </div>
-
-          <p class="product-price">
-            <span class="new-price">28,000₮</span>
-            <span class="old-price">40,000₮</span>
-          </p>
-
-          <div class="product-actions">
-            <button class="add-cart"><i class="fa-regular fa-cart-shopping"></i></button>
-            <button class="wishlist"><i class="fa-regular fa-heart"></i></button>
-          </div>
-        </article>
-      </div>
-    </section>
     <!-- ═══ CART OVERLAY ═══ -->
     <div class="cart-overlay" id="cartOverlay"></div>
     <!-- ═══ CART PANEL ═══ -->
@@ -662,7 +357,7 @@
       </div>
 
     </aside>
-  </main>
+    </main>
   <footer class="footer">
     <div class="footer-container">
 
@@ -703,6 +398,6 @@
       © 2026 BeautyShop. Бүх эрх хуулиар хамгаалагдсан.
     </div>
   </footer>
-  <script src="js/main.js"></script>
+  <script type="module" src="js/main.js"></script>
   </body>
 </html>

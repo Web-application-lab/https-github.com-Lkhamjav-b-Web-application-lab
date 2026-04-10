@@ -130,7 +130,6 @@
  
     .product-detail {text-decoration: none; color: var(--color-black-0);}
 
-
     @media (max-width: 768px) {
       h2.high-rated-product {
         font-size: var(--text-lg);
