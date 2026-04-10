@@ -1,14 +1,14 @@
-fetch("../products.json")
+fetch("products.json")
     .then(res => res.json())
     .then(data => {
         const products = data.products;
-
         const params = new URLSearchParams(window.location.search);
         const productId = Number(params.get("id"));
         console.log(window.location.search);
         console.log(productId);
+        console.log(products.map(p => ({ id: p.id, name: p.name })));
 
-        const product = products.find(item => item.id === productId);
+        const product = products.find(item => Number(item.id) === productId);
 
         const container = document.getElementById("product-detail");
 
