@@ -8,17 +8,16 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     
-    <link rel="preload" fetchpriority="high" as="image" href="/images/hero.webp" type="image/webp">
-
-    <script src="https://kit.fontawesome.com/f23fece6f2.js" crossorigin="anonymous" defer></script>
+    <script src="https://kit.fontawesome.com/f23fece6f2.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="/css/variables.css">
     <link rel="stylesheet" href="/css/navbar.css">
     <link rel="stylesheet" href="/css/body.css">
     <link rel="stylesheet" href="/css/footer.css">
-
+    <link rel="stylesheet" href="/css/checkout.css">
+    
     <link rel="stylesheet" href="/css/product-detail.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="/css/high-rated.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="/css/category-page.css" media="print" onload="this.media='all'">
@@ -50,7 +49,7 @@
                         <circle cx="11" cy="11" r="8"/>
                         <line x1="21" y1="21" x2="16.65" y2="16.65"/>
                     </svg>
-                    <input class="search-box__input" type="text" placeholder="Бүтээгдэхүүн, бренд, найрлагаар хайх..."/>
+                    <input class="search-box__input" type="text" placeholder="Бараа нэрээр хайх..."/>
                 </div>
             </div>
 
@@ -225,15 +224,5 @@
         </section>
     </footer>
     <script type="module" src="/js/main.js"></script>
-    <com-router>
-        <com-routes>
-          <com-route path="/" com="com-home"></com-route>
-          <com-route path="dateidea" com="com-dateidea"></com-route>
-          <com-route path="messenger" com="com-messenger"></com-route>
-          <com-route path="profile" com="com-profile"></com-route>
-          <com-route path="othersprofile" com="com-othersprofile"></com-route>
-          <com-route path="match" com="com-match"></com-route>
-        </com-routes>
-    </com-router>
 </body>
 </html>

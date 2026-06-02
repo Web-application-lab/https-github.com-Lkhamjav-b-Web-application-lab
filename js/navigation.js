@@ -18,7 +18,8 @@ const HASH_ROUTES = new Set([
   "skin-coach",
   "delivery",
   "product-detail",
-  "search"
+  "search",
+  "checkout"
 ]);
 
 function isModifiedClick(event) {

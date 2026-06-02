@@ -13,6 +13,7 @@ const reviewRoutes = require("./routes/review");
 
 
 
+
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log("MongoDB Connected"))
   .catch((err) => console.log("MongoDB Error:", err));
@@ -23,6 +24,7 @@ app.use("/api/auth", authRoutes);
 app.use("/api/admin", adminRoutes);
 app.use("/api/orders", orderRoutes);
 app.use("/api/reviews", reviewRoutes);
+
 
 function sendSpa(req, res) {
   res.sendFile(path.join(root, "index.html"));
@@ -40,7 +42,8 @@ app.get("/orders", sendSpa);
 app.get("/account/profile", sendSpa);
 app.get("/account/orders", sendSpa);
 app.get("/admin", sendSpa);
-app.use("/api/orders", orderRoutes);
+
+
 
 app.get("/api/data", async (req, res) => {
   try {

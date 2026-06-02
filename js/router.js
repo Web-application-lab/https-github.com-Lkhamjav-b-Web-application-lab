@@ -17,6 +17,8 @@ import { renderAccountPage } from "./pages/accountPage.js";
 import { parseLocation } from "./navigation.js";
 import { AuthModal } from "./pages/authPage.js";
 import { renderAdminPage } from "./pages/adminPage.js";
+import { renderCheckoutPage } from "./pages/checkoutPage.js";
+
 
 export function router(products) {
   const app = document.querySelector("#app");
@@ -98,6 +100,9 @@ export function router(products) {
     case "brand":
       renderBrandPage(products, app, params);
       break;
+    case "checkout":
+     renderCheckoutPage(products, app);
+     break;
     default:
       app.innerHTML = `
         <section class="page">

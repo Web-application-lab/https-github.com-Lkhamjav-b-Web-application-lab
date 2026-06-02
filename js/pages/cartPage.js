@@ -1,5 +1,6 @@
 import { updateNavbarCount } from "../utils/navbarCount.js";
 import { showToast } from "../utils/toggle.js";
+import { navigateTo } from "../navigation.js";
 
 function getCart() {
   try {
@@ -114,7 +115,7 @@ class CartPanelClass {
     });
   }
 
-  async _checkout() {
+  _checkout() {
     const user = JSON.parse(localStorage.getItem("user") || "null");
     if (!user) {
       showToast("Захиалга өгөхийн тулд нэвтэрнэ үү!");
@@ -122,51 +123,16 @@ class CartPanelClass {
       return;
     }
 
-    const cart  = getCart();
-    const prods = CartPanelClass._products;
-
-    const items = cart.map(c => {
-      const p = prods.find(pr => Number(pr.id) === Number(c.id));
-      if (!p) return null;
-      return {
-        productId: p.id,
-        name:      p.name,
-        price:     p.discount > 0 ? p.newPrice : p.price,
-        qty:       c.qty,
-        img:       p.img || ""
-      };
-    }).filter(Boolean);
-
-    if (!items.length) return;
-
-    const totalPrice = items.reduce((s, i) => s + i.price * i.qty, 0);
-
-    try {
-      const res = await fetch("/api/orders", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          userId:    user.id,
-          userName:  user.name,
-          userEmail: user.email,
-          userPhone: user.phone || "",
-          items,
-          totalPrice
-        })
-      });
-
-      if (res.ok) {
-        saveCart([]);
-        this._renderItems();
-        this._close();
-        showToast("Захиалга амжилттай өгөгдлөө!");
-      } else {
-        const data = await res.json();
-        showToast(data.error || "Алдаа гарлаа, дахин оролдоно уу");
-      }
-    } catch {
-      showToast("Сервертэй холбогдоход алдаа гарлаа");
+    const cart = getCart();
+    if (!cart.length) {
+      showToast("Сагс хоосон байна!");
+      return;
     }
+
+    // Сагсыг хааж checkout руу navigate хийнэ
+    this._close();
+    navigateTo("#checkout");
+    window.dispatchEvent(new PopStateEvent("popstate"));
   }
 
   _open() {

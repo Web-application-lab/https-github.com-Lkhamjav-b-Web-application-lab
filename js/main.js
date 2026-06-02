@@ -61,28 +61,93 @@ function syncSearchInputWithHash() {
 }
 
 function setupSearch(products) {
-  const input = document.querySelector(".search-box__input");
-  const icon  = document.querySelector(".search-box__icon");
-  if (!input) return;
+  const input     = document.querySelector(".search-box__input");
+  const icon      = document.querySelector(".search-box__icon");
+  const searchBox = document.querySelector(".search-box");
+  if (!input || !searchBox) return;
+
+  // Dropdown үүсгэх
+  const dropdown = document.createElement("div");
+  dropdown.className = "search-dropdown hidden";
+  searchBox.appendChild(dropdown);
 
   const runSearch = () => {
-    const query    = input.value.trim();
-    const nextHash = `#search?q=${encodeURIComponent(query)}`;
+    const query = input.value.trim();
+    dropdown.classList.add("hidden");
+    dropdown.innerHTML = "";
 
+    const nextHash = `#search?q=${encodeURIComponent(query)}`;
     if (window.location.pathname + window.location.hash === `/${nextHash}`) {
       router(products);
       return;
     }
-
     navigateTo(nextHash);
     router(products);
   };
+
+  const showSuggestions = (query) => {
+    dropdown.innerHTML = "";
+    if (!query || query.length < 1) {
+      dropdown.classList.add("hidden");
+      return;
+    }
+
+    const q = query.toLowerCase();
+    const matched = products
+      .filter(p =>
+        p.name?.toLowerCase().includes(q) ||
+        p.brand?.toLowerCase().includes(q)
+      )
+      .slice(0, 8);
+
+    if (!matched.length) {
+      dropdown.classList.add("hidden");
+      return;
+    }
+
+    matched.forEach(p => {
+      const item = document.createElement("div");
+      item.className = "search-dropdown__item";
+      item.innerHTML = `
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"/>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        <span>${p.name}</span>
+      `;
+      item.addEventListener("mousedown", (e) => {
+        e.preventDefault();
+        input.value = p.name;
+        dropdown.classList.add("hidden");
+        navigateTo(`#product-detail?id=${p.id}`);
+        router(products);
+      });
+      dropdown.appendChild(item);
+    });
+
+    dropdown.classList.remove("hidden");
+  };
+
+  input.addEventListener("input", () => {
+    showSuggestions(input.value.trim());
+  });
 
   input.addEventListener("keydown", event => {
     if (event.key === "Enter") {
       event.preventDefault();
       runSearch();
     }
+    if (event.key === "Escape") {
+      dropdown.classList.add("hidden");
+    }
+  });
+
+  input.addEventListener("focus", () => {
+    if (input.value.trim()) showSuggestions(input.value.trim());
+  });
+
+  input.addEventListener("blur", () => {
+    setTimeout(() => dropdown.classList.add("hidden"), 150);
   });
 
   icon?.addEventListener("click", runSearch);

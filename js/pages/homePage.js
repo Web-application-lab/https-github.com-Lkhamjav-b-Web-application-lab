@@ -2,8 +2,15 @@ import { template } from "../components/productCard.js";
 import { navigateTo } from "../navigation.js";
 
 export function renderHomePage(products, container) {
-  const highRated = products.filter(product => product.rating >= 4.5).slice(0, 5);
-  const sales = products.filter(product => product.discount > 0).slice(0, 5);
+  // reviews байгаа бөгөөд rating 4.5-аас дээш бүтээгдэхүүн
+  const highRated = products
+    .filter(p => p.reviews > 0 && p.rating >= 4.5)
+    .sort((a, b) => b.rating - a.rating || b.reviews - a.reviews)
+    .slice(0, 5);
+
+  const sales = products
+    .filter(p => p.discount > 0)
+    .slice(0, 5);
 
   container.innerHTML = `
     <section class="hero" aria-label="hero">
@@ -96,12 +103,14 @@ export function renderHomePage(products, container) {
 
       <section class="discount-product">
         <div class="heading-sale-product">
-          <h2 id="sale-product">Хямдралтай бүтээгдэхүүн</h2>
+          <h2>Хямдралтай бүтээгдэхүүн</h2>
           <a href="#sales" class="view-all">Бүгдийг үзэх</a>
         </div>
-
         <div class="products">
-          ${sales.map(product => template.saleTemplate(product)).join("")}
+          ${sales.length
+            ? sales.map(p => template.saleTemplate(p)).join("")
+            : `<p class="home-empty">Хямдрал байхгүй байна</p>`
+          }
         </div>
       </section>
 

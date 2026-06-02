@@ -26,6 +26,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 200;
+  gap: var(--space-md); /* Элементүүд хоорондоо наалдахаас сэргийлнэ */
 }
 
 .top-nav__logo {
@@ -75,6 +76,7 @@ body {
   font-family: var(--font-body);
   font-size: var(--text-base);
   color: var(--color-black-3);
+  width: 100%;
 }
 
 .search-box__input::placeholder {
@@ -309,82 +311,107 @@ body {
   background: var(--color-rose-light);
 }
 
+/* ==========================================================================
+   RESPONSIVE СТИЛЬ (ГАР УТАС БОЛОН ТАБЛЕТ)
+   ========================================================================== */
 @media (max-width: 48rem) {
-  /* Дээд толгой хэсгийн зайг утсанд зориулж багасгах */
+  /* .top-nav-ийг 2 эгнээ болгож хайлтын хэсгийг доор нь бүтэн өргөнөөр харуулна */
   .top-nav {
     padding: 0 var(--space-md);
-    height: 3.75rem; /* Өндрийг үл ялиг нарийсгах */
-  }
-
-  /* Хайлтын хэсгийг утас дээр нуухын оронд илүү цэвэрхэн харуулах эсвэл нууж болно (таны кодонд нуусан байсан) */
-  .top-nav__search {
-    display: none; 
+    height: auto; 
+    min-height: 4.5rem;
+    flex-wrap: wrap;
+    padding-top: var(--space-sm);
+    padding-bottom: var(--space-sm);
+    gap: var(--space-sm);
   }
 
   .top-nav__logo {
-    font-size: var(--text-lg); /* Логог бага зэрэг жижигсгэх */
+    font-size: var(--text-lg);
+    order: 1; /* Лого зүүн талдаа */
   }
 
-  /* Сагс, хүслийн жагсаалтын товчлууруудын зай */
   .top-nav__actions {
     gap: var(--space-xs);
+    order: 2; /* Товчлуурууд баруун талдаа */
+  }
+
+  /* Хайлтын хэсгийг дараагийн мөр рүү шилжүүлж 100% өргөнтэй болгох */
+  .top-nav__search {
+    flex: none;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    order: 3;
+  }
+
+  .search-box {
+    height: 2.25rem;
   }
 
   .icon-btn {
     padding: 0.375rem;
   }
 
-  /* Нэвтрэх текстийг нууж зөвхөн icon үлдээх үед зайг тааруулах */
+  .login-btn {
+    padding: 0.375rem;
+  }
+
   .login-btn__text {
     display: none;
   }
 
-  /* АНГИЛЛЫН ЦЭС: Утсан дээр доошоо цуврахгүй, баруун тийшээ маш гоё гүйдэг (Story шиг) болгох */
+  /* АНГИЛЛЫН ЦЭС: Хэвтээ тэнхлэг дагуу гүйдэг (Scrollable) хэсэг */
   .cat-nav {
     padding: 0 var(--space-md);
-    height: 2.75rem; /* Өндрийг багасгах */
+    height: 3rem;
     overflow-x: auto;
     overflow-y: hidden;
     white-space: nowrap;
-    scrollbar-width: none; /* Firefox дээр scrollbar нуух */
+    scrollbar-width: none; /* Firefox */
     -webkit-overflow-scrolling: touch;
-    gap: var(--space-sm);
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 7rem; /* top-nav-ын шинэ өндөртэй тааруулж доошлуулав */
   }
 
   .cat-nav::-webkit-scrollbar {
-    display: none; /* Chrome, Safari дээр scrollbar нуух */
+    display: none; /* Chrome, Safari */
   }
 
-  /* "Бүх бүтээгдэхүүн" товчийг утсан дээр зүүн талд нь бэхлэх эсвэл цуг гүйлгэх */
   .cat-nav__all-btn {
     padding-right: var(--space-sm);
     margin-right: 0;
     font-size: var(--text-sm);
     border-right: none;
+    flex-shrink: 0; /* Шахагдахаас сэргийлнэ */
   }
 
   .cat-nav__all-btn span {
-    display: none; /* Текстийг нууж зөвхөн гурван зураас (Hamburger) үлдээнэ */
+    display: none; 
   }
 
   .cat-nav__list {
     display: flex;
     align-items: center;
-    gap: var(--space-xs);
+    gap: var(--space-sm);
+    height: 100%;
+    flex: none; /* Жагсаалтыг эвдрэхээс хамгаална */
   }
 
   .cat-nav__item {
     height: 100%;
+    flex-shrink: 0; /* Ангиллууд жижигрч шахагдахгүй, бүтэн харагдана */
   }
 
   .cat-nav__item > a {
-    padding: 0 var(--space-sm);
+    padding: 0 var(--space-xs);
     font-size: var(--text-sm);
-    display: flex;
-    align-items: center;
+    height: 100%;
   }
 
-  /* Гар утас дээр hover drop-down цэсийг ажиллагаагүй болгох (гар утсан дээр hover ажилладаггүй тул дарахад өөр тийш үсрэхээс сэргийлнэ) */
+  /* Hover цэсийг утас дээр ажиллахгүй болгох */
   .cat-nav__item:hover .dropdown {
     display: none;
   }

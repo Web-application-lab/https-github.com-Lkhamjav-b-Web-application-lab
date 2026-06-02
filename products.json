@@ -26,83 +26,334 @@
       "slug": "hair-care"
     }
   ],
-
   "subCategories": [
-    { "id": 1, "name": "Цэвэрлэгээ", "slug": "cleansing", "categoryId": 1, "categorySlug": "skincare" },
-    { "id": 2, "name": "Арчилгаа", "slug": "treatment", "categoryId": 1, "categorySlug": "skincare" },
-    { "id": 3, "name": "Чийгшүүлэгч", "slug": "moisturizer", "categoryId": 1, "categorySlug": "skincare" },
-    { "id": 4, "name": "Маск", "slug": "mask", "categoryId": 1, "categorySlug": "skincare" },
-    { "id": 5, "name": "Суурь", "slug": "foundation", "categoryId": 2, "categorySlug": "makeup" },
-    { "id": 6, "name": "Нүд", "slug": "eyes", "categoryId": 2, "categorySlug": "makeup" },
-    { "id": 7, "name": "Уруул", "slug": "lips", "categoryId": 2, "categorySlug": "makeup" },
-    { "id": 8, "name": "Хацар өнгөлөгч", "slug": "blush", "categoryId": 2, "categorySlug": "makeup" },
-    { "id": 9, "name": "Нүүр", "slug": "face", "categoryId": 3, "categorySlug": "sun-care" },
-    { "id": 10, "name": "Бие", "slug": "body", "categoryId": 3, "categorySlug": "sun-care" },
-    { "id": 11, "name": "Биеийн саван", "slug": "body-wash", "categoryId": 4, "categorySlug": "body-care" },
-    { "id": 12, "name": "Биеийн тос", "slug": "body-lotion", "categoryId": 4, "categorySlug": "body-care" },
-    { "id": 13, "name": "Үнэртэн", "slug": "fragrance", "categoryId": 4, "categorySlug": "body-care" },
-    { "id": 14, "name": "Шампунь", "slug": "shampoo", "categoryId": 5, "categorySlug": "hair-care" },
-    { "id": 15, "name": "Ангижруулагч", "slug": "conditioner", "categoryId": 5, "categorySlug": "hair-care" },
-    { "id": 16, "name": "Маск & Тос", "slug": "hair-mask", "categoryId": 5, "categorySlug": "hair-care" }
+    {
+      "id": 1,
+      "name": "Цэвэрлэгээ",
+      "slug": "cleansing",
+      "categoryId": 1,
+      "categorySlug": "skincare"
+    },
+    {
+      "id": 2,
+      "name": "Арчилгаа",
+      "slug": "treatment",
+      "categoryId": 1,
+      "categorySlug": "skincare"
+    },
+    {
+      "id": 3,
+      "name": "Чийгшүүлэгч",
+      "slug": "moisturizer",
+      "categoryId": 1,
+      "categorySlug": "skincare"
+    },
+    {
+      "id": 4,
+      "name": "Маск",
+      "slug": "mask",
+      "categoryId": 1,
+      "categorySlug": "skincare"
+    },
+    {
+      "id": 5,
+      "name": "Суурь",
+      "slug": "foundation",
+      "categoryId": 2,
+      "categorySlug": "makeup"
+    },
+    {
+      "id": 6,
+      "name": "Нүд",
+      "slug": "eyes",
+      "categoryId": 2,
+      "categorySlug": "makeup"
+    },
+    {
+      "id": 7,
+      "name": "Уруул",
+      "slug": "lips",
+      "categoryId": 2,
+      "categorySlug": "makeup"
+    },
+    {
+      "id": 8,
+      "name": "Хацар өнгөлөгч",
+      "slug": "blush",
+      "categoryId": 2,
+      "categorySlug": "makeup"
+    },
+    {
+      "id": 9,
+      "name": "Нүүр",
+      "slug": "face",
+      "categoryId": 3,
+      "categorySlug": "sun-care"
+    },
+    {
+      "id": 10,
+      "name": "Бие",
+      "slug": "body",
+      "categoryId": 3,
+      "categorySlug": "sun-care"
+    },
+    {
+      "id": 11,
+      "name": "Биеийн саван",
+      "slug": "body-wash",
+      "categoryId": 4,
+      "categorySlug": "body-care"
+    },
+    {
+      "id": 12,
+      "name": "Биеийн тос",
+      "slug": "body-lotion",
+      "categoryId": 4,
+      "categorySlug": "body-care"
+    },
+    {
+      "id": 13,
+      "name": "Үнэртэн",
+      "slug": "fragrance",
+      "categoryId": 4,
+      "categorySlug": "body-care"
+    },
+    {
+      "id": 14,
+      "name": "Шампунь",
+      "slug": "shampoo",
+      "categoryId": 5,
+      "categorySlug": "hair-care"
+    },
+    {
+      "id": 15,
+      "name": "Ангижруулагч",
+      "slug": "conditioner",
+      "categoryId": 5,
+      "categorySlug": "hair-care"
+    },
+    {
+      "id": 16,
+      "name": "Маск & Тос",
+      "slug": "hair-mask",
+      "categoryId": 5,
+      "categorySlug": "hair-care"
+    }
   ],
-
   "categoryNavigation": {
     "bySlug": {
-      "skincare": { "categoryId": 1, "name": "Арьс арчилгаа" },
-      "makeup": { "categoryId": 2, "name": "Нүүр будалт" },
-      "sun-care": { "categoryId": 3, "name": "Нарны хамгаалалт" },
-      "body-care": { "categoryId": 4, "name": "Бие арчилгаа" },
-      "hair-care": { "categoryId": 5, "name": "Үс арчилгаа" },
-      "cleansing": { "categoryId": 1, "subCategoryId": 1, "name": "Цэвэрлэгээ" },
-      "treatment": { "categoryId": 1, "subCategoryId": 2, "name": "Арчилгаа" },
-      "moisturizer": { "categoryId": 1, "subCategoryId": 3, "name": "Чийгшүүлэгч" },
-      "mask": { "categoryId": 1, "subCategoryId": 4, "name": "Маск" },
-      "foundation": { "categoryId": 2, "subCategoryId": 5, "name": "Суурь" },
-      "eyes": { "categoryId": 2, "subCategoryId": 6, "name": "Нүд" },
-      "lips": { "categoryId": 2, "subCategoryId": 7, "name": "Уруул" },
-      "blush": { "categoryId": 2, "subCategoryId": 8, "name": "Хацар өнгөлөгч" },
-      "face": { "categoryId": 3, "subCategoryId": 9, "name": "Нүүр" },
-      "body": { "categoryId": 3, "subCategoryId": 10, "name": "Бие" },
-      "body-wash": { "categoryId": 4, "subCategoryId": 11, "name": "Биеийн саван" },
-      "body-lotion": { "categoryId": 4, "subCategoryId": 12, "name": "Биеийн тос" },
-      "fragrance": { "categoryId": 4, "subCategoryId": 13, "name": "Үнэртэн" },
-      "shampoo": { "categoryId": 5, "subCategoryId": 14, "name": "Шампунь" },
-      "conditioner": { "categoryId": 5, "subCategoryId": 15, "name": "Ангижруулагч" },
-      "hair-mask": { "categoryId": 5, "subCategoryId": 16, "name": "Маск & Тос" }
+      "skincare": {
+        "categoryId": 1,
+        "name": "Арьс арчилгаа"
+      },
+      "makeup": {
+        "categoryId": 2,
+        "name": "Нүүр будалт"
+      },
+      "sun-care": {
+        "categoryId": 3,
+        "name": "Нарны хамгаалалт"
+      },
+      "body-care": {
+        "categoryId": 4,
+        "name": "Бие арчилгаа"
+      },
+      "hair-care": {
+        "categoryId": 5,
+        "name": "Үс арчилгаа"
+      },
+      "cleansing": {
+        "categoryId": 1,
+        "subCategoryId": 1,
+        "name": "Цэвэрлэгээ"
+      },
+      "treatment": {
+        "categoryId": 1,
+        "subCategoryId": 2,
+        "name": "Арчилгаа"
+      },
+      "moisturizer": {
+        "categoryId": 1,
+        "subCategoryId": 3,
+        "name": "Чийгшүүлэгч"
+      },
+      "mask": {
+        "categoryId": 1,
+        "subCategoryId": 4,
+        "name": "Маск"
+      },
+      "foundation": {
+        "categoryId": 2,
+        "subCategoryId": 5,
+        "name": "Суурь"
+      },
+      "eyes": {
+        "categoryId": 2,
+        "subCategoryId": 6,
+        "name": "Нүд"
+      },
+      "lips": {
+        "categoryId": 2,
+        "subCategoryId": 7,
+        "name": "Уруул"
+      },
+      "blush": {
+        "categoryId": 2,
+        "subCategoryId": 8,
+        "name": "Хацар өнгөлөгч"
+      },
+      "face": {
+        "categoryId": 3,
+        "subCategoryId": 9,
+        "name": "Нүүр"
+      },
+      "body": {
+        "categoryId": 3,
+        "subCategoryId": 10,
+        "name": "Бие"
+      },
+      "body-wash": {
+        "categoryId": 4,
+        "subCategoryId": 11,
+        "name": "Биеийн саван"
+      },
+      "body-lotion": {
+        "categoryId": 4,
+        "subCategoryId": 12,
+        "name": "Биеийн тос"
+      },
+      "fragrance": {
+        "categoryId": 4,
+        "subCategoryId": 13,
+        "name": "Үнэртэн"
+      },
+      "shampoo": {
+        "categoryId": 5,
+        "subCategoryId": 14,
+        "name": "Шампунь"
+      },
+      "conditioner": {
+        "categoryId": 5,
+        "subCategoryId": 15,
+        "name": "Ангижруулагч"
+      },
+      "hair-mask": {
+        "categoryId": 5,
+        "subCategoryId": 16,
+        "name": "Маск & Тос"
+      }
     },
     "byName": {
-      "Арьс арчилгаа": { "categoryId": 1, "slug": "skincare" },
-      "Нүүр будалт": { "categoryId": 2, "slug": "makeup" },
-      "Нарны хамгаалалт": { "categoryId": 3, "slug": "sun-care" },
-      "Бие арчилгаа": { "categoryId": 4, "slug": "body-care" },
-      "Үс арчилгаа": { "categoryId": 5, "slug": "hair-care" },
-      "Цэвэрлэгээ": { "categoryId": 1, "subCategoryId": 1, "slug": "cleansing" },
-      "Арчилгаа": { "categoryId": 1, "subCategoryId": 2, "slug": "treatment" },
-      "Чийгшүүлэгч": { "categoryId": 1, "subCategoryId": 3, "slug": "moisturizer" },
-      "Маск": { "categoryId": 1, "subCategoryId": 4, "slug": "mask" },
-      "Суурь": { "categoryId": 2, "subCategoryId": 5, "slug": "foundation" },
-      "Нүд": { "categoryId": 2, "subCategoryId": 6, "slug": "eyes" },
-      "Уруул": { "categoryId": 2, "subCategoryId": 7, "slug": "lips" },
-      "Хацар өнгөлөгч": { "categoryId": 2, "subCategoryId": 8, "slug": "blush" },
-      "Нүүр": { "categoryId": 3, "subCategoryId": 9, "slug": "face" },
-      "Бие": { "categoryId": 3, "subCategoryId": 10, "slug": "body" },
-      "Биеийн саван": { "categoryId": 4, "subCategoryId": 11, "slug": "body-wash" },
-      "Биеийн тос": { "categoryId": 4, "subCategoryId": 12, "slug": "body-lotion" },
-      "Үнэртэн": { "categoryId": 4, "subCategoryId": 13, "slug": "fragrance" },
-      "Шампунь": { "categoryId": 5, "subCategoryId": 14, "slug": "shampoo" },
-      "Ангижруулагч": { "categoryId": 5, "subCategoryId": 15, "slug": "conditioner" },
-      "Маск & Тос": { "categoryId": 5, "subCategoryId": 16, "slug": "hair-mask" }
+      "Арьс арчилгаа": {
+        "categoryId": 1,
+        "slug": "skincare"
+      },
+      "Нүүр будалт": {
+        "categoryId": 2,
+        "slug": "makeup"
+      },
+      "Нарны хамгаалалт": {
+        "categoryId": 3,
+        "slug": "sun-care"
+      },
+      "Бие арчилгаа": {
+        "categoryId": 4,
+        "slug": "body-care"
+      },
+      "Үс арчилгаа": {
+        "categoryId": 5,
+        "slug": "hair-care"
+      },
+      "Цэвэрлэгээ": {
+        "categoryId": 1,
+        "subCategoryId": 1,
+        "slug": "cleansing"
+      },
+      "Арчилгаа": {
+        "categoryId": 1,
+        "subCategoryId": 2,
+        "slug": "treatment"
+      },
+      "Чийгшүүлэгч": {
+        "categoryId": 1,
+        "subCategoryId": 3,
+        "slug": "moisturizer"
+      },
+      "Маск": {
+        "categoryId": 1,
+        "subCategoryId": 4,
+        "slug": "mask"
+      },
+      "Суурь": {
+        "categoryId": 2,
+        "subCategoryId": 5,
+        "slug": "foundation"
+      },
+      "Нүд": {
+        "categoryId": 2,
+        "subCategoryId": 6,
+        "slug": "eyes"
+      },
+      "Уруул": {
+        "categoryId": 2,
+        "subCategoryId": 7,
+        "slug": "lips"
+      },
+      "Хацар өнгөлөгч": {
+        "categoryId": 2,
+        "subCategoryId": 8,
+        "slug": "blush"
+      },
+      "Нүүр": {
+        "categoryId": 3,
+        "subCategoryId": 9,
+        "slug": "face"
+      },
+      "Бие": {
+        "categoryId": 3,
+        "subCategoryId": 10,
+        "slug": "body"
+      },
+      "Биеийн саван": {
+        "categoryId": 4,
+        "subCategoryId": 11,
+        "slug": "body-wash"
+      },
+      "Биеийн тос": {
+        "categoryId": 4,
+        "subCategoryId": 12,
+        "slug": "body-lotion"
+      },
+      "Үнэртэн": {
+        "categoryId": 4,
+        "subCategoryId": 13,
+        "slug": "fragrance"
+      },
+      "Шампунь": {
+        "categoryId": 5,
+        "subCategoryId": 14,
+        "slug": "shampoo"
+      },
+      "Ангижруулагч": {
+        "categoryId": 5,
+        "subCategoryId": 15,
+        "slug": "conditioner"
+      },
+      "Маск & Тос": {
+        "categoryId": 5,
+        "subCategoryId": 16,
+        "slug": "hair-mask"
+      }
     }
   },
-
   "products": [
     {
       "id": 1,
       "name": "Snail mucin 88 + Peptide Cream 100ml",
       "brand": "Jumiso",
       "price": 60000,
-      "rating": 4.9,
-      "reviews": 200,
+      "rating": 0,
+      "reviews": 0,
       "stock": 10,
       "categoryId": 1,
       "subCategoryId": 3,
@@ -132,8 +383,8 @@
       "name": "Waterfull Hyaluronic Toner 200ml",
       "brand": "Jumiso",
       "price": 45000,
-      "rating": 4.3,
-      "reviews": 220,
+      "rating": 0,
+      "reviews": 0,
       "stock": 10,
       "categoryId": 1,
       "subCategoryId": 2,
@@ -165,8 +416,8 @@
       "name": "Cicaterol Toner 200ml",
       "brand": "Beplain",
       "price": 72000,
-      "rating": 4.8,
-      "reviews": 150,
+      "rating": 0,
+      "reviews": 0,
       "stock": 10,
       "categoryId": 1,
       "subCategoryId": 2,
@@ -197,8 +448,8 @@
       "name": "Cleansing Oil 200ml",
       "brand": "Beplain",
       "price": 56000,
-      "rating": 4.9,
-      "reviews": 160,
+      "rating": 0,
+      "reviews": 0,
       "stock": 10,
       "categoryId": 1,
       "subCategoryId": 1,
@@ -229,8 +480,8 @@
       "name": "Mugwort Calming Cleanser 150ml",
       "brand": "Round Lab",
       "price": 55000,
-      "rating": 4.7,
-      "reviews": 300,
+      "rating": 0,
+      "reviews": 0,
       "stock": 10,
       "categoryId": 1,
       "subCategoryId": 1,
@@ -259,8 +510,8 @@
       "name": "Birch Juice Moisturizing Serum 50ml",
       "brand": "Round Lab",
       "price": 67000,
-      "rating": 4.4,
-      "reviews": 360,
+      "rating": 0,
+      "reviews": 0,
       "stock": 10,
       "categoryId": 1,
       "subCategoryId": 2,
@@ -290,8 +541,8 @@
       "name": "Dark Spot Correcting Glow Serum 50ml",
       "brand": "AXIS-Y",
       "price": 99000,
-      "rating": 4.8,
-      "reviews": 250,
+      "rating": 0,
+      "reviews": 0,
       "stock": 10,
       "categoryId": 1,
       "subCategoryId": 2,
@@ -322,8 +573,8 @@
       "name": "Daily Purifying Treatment Toner 200ml",
       "brand": "AXIS-Y",
       "price": 89000,
-      "rating": 4.8,
-      "reviews": 250,
+      "rating": 0,
+      "reviews": 0,
       "stock": 10,
       "categoryId": 1,
       "subCategoryId": 2,
@@ -354,8 +605,8 @@
       "name": "345 Relief Cream 50ml",
       "brand": "Dr.Althea ",
       "price": 25000,
-      "rating": 4.9,
-      "reviews": 500,
+      "rating": 0,
+      "reviews": 0,
       "stock": 10,
       "categoryId": 1,
       "subCategoryId": 3,
@@ -388,8 +639,8 @@
       "name": "Eye Cream 30ml",
       "brand": "Dr.Althea ",
       "price": 55000,
-      "rating": 5.0,
-      "reviews": 580,
+      "rating": 0,
+      "reviews": 0,
       "stock": 10,
       "categoryId": 1,
       "subCategoryId": 2,
@@ -422,8 +673,8 @@
       "name": "Aqua Blue Hydration Mask",
       "brand": "Dr.Althea ",
       "price": 5000,
-      "rating": 4.0,
-      "reviews": 480,
+      "rating": 0,
+      "reviews": 0,
       "stock": 10,
       "categoryId": 1,
       "subCategoryId": 4,
@@ -452,8 +703,8 @@
       "name": "Glow cushion light",
       "brand": "Missha",
       "price": 70000,
-      "rating": 4.9,
-      "reviews": 230,
+      "rating": 0,
+      "reviews": 0,
       "stock": 10,
       "categoryId": 2,
       "subCategoryId": 5,
@@ -471,8 +722,8 @@
       "name": "3D mascara",
       "brand": "Missha",
       "price": 30000,
-      "rating": 4.8,
-      "reviews": 210,
+      "rating": 0,
+      "reviews": 0,
       "stock": 10,
       "categoryId": 2,
       "subCategoryId": 6,
@@ -490,8 +741,8 @@
       "name": "Dare Rouge Sheer Sleek lipstick",
       "brand": "Missha",
       "price": 25000,
-      "rating": 4.9,
-      "reviews": 290,
+      "rating": 0,
+      "reviews": 0,
       "stock": 10,
       "categoryId": 2,
       "subCategoryId": 7,
@@ -509,8 +760,8 @@
       "name": "Satin Blusher Italprisma",
       "brand": "Missha",
       "price": 24000,
-      "rating": 3.9,
-      "reviews": 135,
+      "rating": 0,
+      "reviews": 0,
       "stock": 10,
       "categoryId": 2,
       "subCategoryId": 8,
@@ -528,8 +779,8 @@
       "name": "All Around Safe Block Essence Sun Stick",
       "brand": "Missha",
       "price": 67000,
-      "rating": 4.3,
-      "reviews": 440,
+      "rating": 0,
+      "reviews": 0,
       "stock": 10,
       "categoryId": 3,
       "subCategoryId": 9,
@@ -547,8 +798,8 @@
       "name": "Sun Stick",
       "brand": "Innisfree",
       "price": 38000,
-      "rating": 4.7,
-      "reviews": 160,
+      "rating": 0,
+      "reviews": 0,
       "stock": 10,
       "categoryId": 3,
       "subCategoryId": 10,
@@ -566,8 +817,8 @@
       "name": "Pine Calming Cica Body Wash 400ml",
       "brand": "Round lab",
       "price": 46000,
-      "rating": 4.8,
-      "reviews": 359,
+      "rating": 0,
+      "reviews": 0,
       "stock": 10,
       "categoryId": 4,
       "subCategoryId": 11,
@@ -585,8 +836,8 @@
       "name": "Ceramide Ato Lotion Double Pack 600ml",
       "brand": "ILLIYOON",
       "price": 45000,
-      "rating": 4.4,
-      "reviews": 250,
+      "rating": 0,
+      "reviews": 0,
       "stock": 10,
       "categoryId": 4,
       "subCategoryId": 12,
@@ -604,8 +855,8 @@
       "name": "Dare Body Mist",
       "brand": "Missha",
       "price": 34000,
-      "rating": 4.2,
-      "reviews": 190,
+      "rating": 0,
+      "reviews": 0,
       "stock": 10,
       "categoryId": 4,
       "subCategoryId": 13,
@@ -623,8 +874,8 @@
       "name": "Alpha Erguen Shampoo 500ml",
       "brand": "ROOTON",
       "price": 76000,
-      "rating": 4.3,
-      "reviews": 290,
+      "rating": 0,
+      "reviews": 0,
       "stock": 10,
       "categoryId": 5,
       "subCategoryId": 14,
@@ -642,8 +893,8 @@
       "name": "Alpha Erguen Treatment 500ml",
       "brand": "ROOTON",
       "price": 87000,
-      "rating": 4.5,
-      "reviews": 220,
+      "rating": 0,
+      "reviews": 0,
       "stock": 10,
       "categoryId": 5,
       "subCategoryId": 15,
@@ -661,8 +912,8 @@
       "name": "Ferfume Recovery Butter Hair Mask 200ml",
       "brand": "JULYME",
       "price": 30000,
-      "rating": 4.2,
-      "reviews": 320,
+      "rating": 0,
+      "reviews": 0,
       "stock": 10,
       "categoryId": 5,
       "subCategoryId": 16,
@@ -681,8 +932,8 @@
       "brand": "Eqqualberry",
       "price": 42000,
       "discount": 20,
-      "rating": 4.8,
-      "reviews": 16,
+      "rating": 0,
+      "reviews": 0,
       "stock": 10,
       "categoryId": 1,
       "subCategoryId": 2,
@@ -710,8 +961,8 @@
       "brand": "Fwee",
       "price": 40000,
       "discount": 30,
-      "rating": 3.5,
-      "reviews": 2,
+      "rating": 0,
+      "reviews": 0,
       "stock": 10,
       "categoryId": 2,
       "subCategoryId": 7,
@@ -792,7 +1043,7 @@
       "name": "Mung Bean Pore Clay Mask",
       "brand": "Beplain",
       "price": 65000,
-      "rating": 4.7,
+      "rating": 0,
       "reviews": 0,
       "stock": 10,
       "categoryId": 1,
